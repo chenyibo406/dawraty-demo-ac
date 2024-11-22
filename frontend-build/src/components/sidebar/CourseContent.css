@@ -1,0 +1,107 @@
+.courseContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courseContent__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 32px; */
+  padding: 0 12px;
+  /* border-bottom: 1px solid #0e0e0e; */
+  border-bottom: 1px solid #d1d7dc;
+  height: 56px;
+}
+
+.courseContent__item--left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courseContent__item--left img {
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 12px; /* Space between image and text */
+}
+
+.courseContent__item--left h1 {
+  font-size: var(--font-size-13);
+  font-weight: 500px;
+  color: #0e0e0e;
+}
+
+.courseContent__item--right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.courseContent__item--right h2 {
+  font-size: var(--font-size-12);
+  line-height: 0%;
+  /* position: relative;
+  top: 2px; */
+  /* line-height: none; */
+  /* font-size: 12px; */
+}
+
+.arrow-down {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.courseContent__task {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.courseContent__task--content li {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+
+  padding: 0 12px;
+  /* gap: 2px; */
+  background: var(--sidebar-task-bg);
+  border-bottom: 1px solid var(--dark-gray-10);
+  height: 56px;
+}
+.courseContent__task--topic {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.courseContent__task--check {
+  position: relative; /* Set the container to relative positioning */
+  width: 24px; /* Set a width for the container */
+  height: 24px;
+}
+
+.courseContent__task--check img {
+  position: absolute; /* Set images to absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center the images */
+}
+
+.courseContent__task-title {
+  font-size: var(--font-size-12);
+}
+
+.courseContent__task-time {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 4px;
+  font-size: var(--font-size-12);
+  /* border: 1px solid red; */
+  margin-left: 32px;
+}

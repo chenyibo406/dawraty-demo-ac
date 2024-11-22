@@ -1,0 +1,162 @@
+.ace {
+  /* border: 1px solid red; */
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ace__chapter-btn {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--font-size-14);
+  color: var(--primary);
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--border-radius-2);
+  border: 1px solid var(--primary-60);
+  background-color: var(--secondary-10);
+}
+
+.ace__chapter-dropdown-item {
+  text-align: center;
+  padding: 10px 0;
+  color: var(--primary);
+  font-size: var(--font-size-14);
+  border-left: 1px solid var(--primary-60); /* Left border */
+  border-right: 1px solid var(--primary-60); /* Right border */
+  border-bottom: 1px solid var(--primary-60); /* Bottom border */
+  border-top: none; /* No top border (optional, as it's the default) */
+}
+
+.ace__switch-menu {
+  display: flex;
+  border: 1px solid var(--primary-20);
+  border-radius: var(--border-radius-40);
+  padding: 2px;
+}
+
+.ace__switch-btn {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: var(--border-radius-40);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: var(--font-size-14);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.ace__switch-btn.active {
+  background-color: var(--primary); /* Background color for active button */
+  color: #fff; /* Font color for active button */
+}
+
+.ace__switch-btn:not(.active) {
+  background-color: transparent; /* No background for inactive button */
+  color: var(--primary); /* Font color for inactive button */
+}
+
+.ace__viewMode {
+  border: 1px solid var(--primary-40);
+  padding: 12px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.ace__viewMode h1 {
+  color: var(--primary);
+  font-size: var(--font-size-16);
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+.ace__viewMode-switch {
+  display: flex;
+  border: 1px solid var(--dark-gray-10);
+  padding: 8px;
+  border-radius: 40px;
+}
+
+.ace_viewMode-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 4px 0;
+  border-radius: 40px;
+  background-color: #fff;
+
+  font-size: var(--font-size-16);
+}
+
+.ace_viewMode-btn.active {
+  background-color: var(--light-blue);
+  transition: all 0.3 ease;
+}
+
+.ace__switch-btn:not(.active) {
+  /* color: var(--primary); */
+  /* color: var(--primary); */
+}
+
+.ace__AiGenerate-btn {
+  text-align: center;
+  width: 100%;
+  padding: 12px 0;
+  font-size: var(--font-size-14);
+  font-weight: 600;
+  border-radius: 40px;
+  color: #fff;
+  border: none;
+  background-color: var(--primary);
+}
+
+.ace__save-flashcards {
+  width: 100%;
+  border: 1px solid var(--primary-70);
+  padding: 16px;
+  border-radius: 18px;
+  text-align: center;
+  /* gap: 14px; */
+
+  /* font-size: 14px; */
+}
+
+.ace__save-flashcards-title {
+  font-size: var(--font-size-14);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.ace__save-flashcards-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid var(--dark-gray-20);
+  background-color: white;
+
+  font-size: var(--font-size-14);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.ace__save-flashcards-button span {
+  /* height: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+}

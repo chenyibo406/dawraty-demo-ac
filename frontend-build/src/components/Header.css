@@ -1,0 +1,111 @@
+.header {
+  /* height: 88px; */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header__left-category {
+  font-size: var(--font-size-14);
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+.header__searchbox {
+  display: flex;
+  align-items: center; /* Center the icon and input vertically */
+  flex-grow: 1; /* Allow the search box to grow and occupy remaining space */
+  margin: 0 20px; /* Add some space between logo and search box */
+  position: relative;
+}
+
+.header__searchbox-input {
+  flex-grow: 1; /* Allow the input to take the remaining width */
+  padding: 12px 40px; /* Add some padding for better appearance */
+  border: none;
+  border-radius: 40px; /* Rounded corners */
+
+  font-size: var(--font-size-14);
+  font-weight: 500;
+  background: #eeeeee;
+}
+
+.header__searchbox-icon {
+  position: absolute;
+  left: 12px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.header__right-login,
+.header__right-signup {
+  font-size: var(--font-size-14);
+  font-weight: 500;
+  border: 1px solid var(--primary);
+  padding: 10px 16px;
+  height: 100%;
+  border-radius: 40px;
+}
+.header__right-login {
+  color: var(--primary);
+  background-color: #fff;
+}
+
+.header__right-signup {
+  color: #fff;
+  background-color: var(--primary);
+}
+
+.header__right-instructor h1 {
+  font-size: var(--font-size-14);
+  font-weight: 600;
+  color: var(--dark-gray);
+  text-decoration: underline;
+}
+
+/* Header.css */
+.header__right-lan {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.language-switch {
+  display: flex;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 20px; /* Rounded corners */
+  background-color: white; /* Default background color */
+
+  width: 100px; /* Width of the switch */
+  justify-content: space-between; /* Space between labels */
+  border: 1px solid var(--primary);
+}
+
+.switch-label {
+  width: 50%; /* Each label takes half the width */
+  border-radius: 40px;
+  text-align: center; /* Center text */
+  padding: 8px; /* Padding for better appearance */
+  font-size: var(--font-size-12);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.switch-label.active {
+  background-color: var(--primary); /* Active background color */
+  color: white; /* Active text color */
+}
+
+.switch-label:not(.active) {
+  background-color: white; /* Inactive background color */
+  color: var(--primary); /* Inactive text color */
+}

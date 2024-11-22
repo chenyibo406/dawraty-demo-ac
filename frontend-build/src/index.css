@@ -1,0 +1,200 @@
+@import url("normalize.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px by default */
+  line-height: 1.15; /* Improve readability */
+}
+
+ul,
+ol,
+li {
+  list-style: none; /* Remove bullets and numbers */
+}
+
+/* Set default styles for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1;
+  padding: 0;
+}
+
+/* Set default styles for images */
+img {
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Set default styles for links */
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+/* Set default styles for tables */
+table {
+  border-collapse: collapse; /* Merge borders */
+  border-spacing: 0; /* Remove spacing */
+}
+
+/* Set default styles for form elements */
+input,
+button,
+textarea,
+select {
+  font-family: inherit; /* Inherit font from parent */
+  font-size: inherit; /* Inherit font size from parent */
+  line-height: inherit; /* Inherit line height from parent */
+}
+
+/* Set default styles for buttons */
+button {
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Set default styles for block elements */
+blockquote {
+  margin: 0; /* Remove default margin */
+}
+
+:root {
+  font-size: 10px;
+  font-family: Metropolis, Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  /* line-height: 1.5; */
+  font-weight: 400;
+
+  --font-size-8: 0.8rem;
+  --font-size-10: 1rem;
+  --font-size-12: 1.2rem;
+  --font-size-13: 1.3rem;
+  --font-size-14: 1.4rem;
+  --font-size-16: 1.6rem;
+
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+
+  --border-radius-2: 2px;
+  --border-radius-4: 4px;
+  --border-radius-6: 6px;
+  --border-radius-8: 8px;
+  --border-radius-12: 12px;
+  --border-radius-20: 20px;
+  --border-radius-40: 40px;
+  --border-radius-full: 100%;
+
+  --primary: #0b4374;
+  --secondary: #138ab4;
+  --dark-gray: #0e0e0e;
+  --accent: #9747ff;
+  --white: #ffffff;
+
+  --success: #02a976;
+  --error: #ef1b1b;
+
+  --green: #00a991;
+  --yellow: #c8bf18;
+  --orange: #e5a51c;
+  --red-orange: #d98477;
+  --light-orange: #f09e1b;
+  --light-blue: #1580dc;
+
+  --footer-bg-gray: #575757;
+  --dashboard-active-bg: #e4fffb;
+  --dashboard-section-bg: #eaf8ff;
+  --sidebar-task-bg: #e5f3ff;
+
+  --dashbord-lock-lg-bg: linear-gradient(to bottom, #0b4475 -50%, #138ab4 50%);
+  --aiTag-lg-bg: linear-gradient(to right, #a5219f, #d98477);
+  --collapseIcon-lg-bg: linear-gradient(
+    to bottom,
+    var(--secondary),
+    var(--light-blue)
+  );
+  --dashboard-lg-bg-darkBlue: linear-gradient(
+    to bottom right,
+    var(--light-blue),
+    var(--primary)
+  );
+  --dashboard-lg-bg-lightBlue: linear-gradient(to right, #badfff, #a1e6ff);
+
+  --primary-90: rgba(11, 67, 116, 0.9);
+  --secondary-90: rgba(19, 139, 180, 0.9);
+  --dark-gray-90: rgba(14, 14, 14, 0.9);
+  --accent-90: rgba(151, 71, 255, 0.9);
+  --light-blue-90: rgba(21, 128, 220, 0.9);
+
+  --primary-80: rgba(11, 67, 116, 0.8);
+  --secondary-80: rgba(19, 139, 180, 0.8);
+  --dark-gray-80: rgba(14, 14, 14, 0.8);
+  --accent-80: rgba(151, 71, 255, 0.8);
+  --light-blue-80: rgba(21, 128, 220, 0.8);
+
+  --primary-70: rgba(11, 67, 116, 0.7);
+  --secondary-70: rgba(19, 139, 170, 0.7);
+  --dark-gray-70: rgba(14, 14, 14, 0.7);
+  --accent-70: rgba(151, 71, 255, 0.7);
+  --light-blue-70: rgba(21, 128, 220, 0.7);
+
+  --primary-60: rgba(11, 67, 116, 0.6);
+  --secondary-60: rgba(19, 139, 160, 0.6);
+  --dark-gray-60: rgba(14, 14, 14, 0.6);
+  --accent-60: rgba(151, 71, 255, 0.6);
+  --light-blue-60: rgba(21, 128, 220, 0.6);
+
+  --primary-50: rgba(11, 67, 116, 0.5);
+  --secondary-50: rgba(19, 139, 160, 0.5);
+  --dark-gray-50: rgba(14, 14, 14, 0.5);
+  --accent-50: rgba(151, 71, 255, 0.5);
+  --light-blue-50: rgba(21, 128, 220, 0.5);
+
+  --primary-40: rgba(11, 67, 116, 0.4);
+  --secondary-40: rgba(19, 139, 160, 0.4);
+  --dark-gray-40: rgba(14, 14, 14, 0.4);
+  --accent-40: rgba(151, 71, 255, 0.4);
+  --light-blue-40: rgba(21, 128, 220, 0.4);
+
+  --primary-30: rgba(11, 67, 116, 0.3);
+  --secondary-30: rgba(19, 139, 160, 0.3);
+  --dark-gray-30: rgba(14, 14, 14, 0.3);
+  --accent-30: rgba(151, 71, 255, 0.3);
+  --light-blue-30: rgba(21, 128, 220, 0.3);
+
+  --primary-20: rgba(11, 67, 116, 0.2);
+  --secondary-20: rgba(19, 139, 160, 0.2);
+  --dark-gray-20: rgba(14, 14, 14, 0.2);
+  --accent-20: rgba(151, 71, 255, 0.2);
+  --light-blue-20: rgba(21, 128, 220, 0.2);
+
+  --primary-10: rgba(11, 67, 116, 0.1);
+  --secondary-10: rgba(19, 139, 160, 0.1);
+  --dark-gray-10: rgba(14, 14, 14, 0.1);
+  --accent-10: rgba(151, 71, 255, 0.1);
+  --light-blue-10: rgba(21, 128, 220, 0.1);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,17 @@
+.course-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  padding: 32px 20px 60px 20px;
+}
+
+/* Assuming you have a CSS file or a style block */
+.course-page__content {
+  overflow: hidden; /* Add scrollbars if content overflows */
+  margin-left: 20px;
+  width: calc(100% * 960 / 640);
+  height: 100%;
+  border: 1px solid var(--dark-gray-20);
+}

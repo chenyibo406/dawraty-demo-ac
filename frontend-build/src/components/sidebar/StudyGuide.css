@@ -1,0 +1,51 @@
+.studyGuide {
+  padding: 20px;
+}
+
+.studyGuide__about--content {
+  font-size: var(--font-size-14);
+  line-height: 20px;
+  color: var(--dark-gray-70);
+  font-weight: 600;
+
+  letter-spacing: 0.1px;
+}
+
+.studyGuide__object {
+  margin-top: 12px;
+}
+
+.studyGuide__object--list {
+  padding-left: 0; /* Remove left padding */
+}
+
+ul {
+  list-style: decimal;
+}
+
+.studyGuide__object--item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.studyGuide__object--item p {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-500);
+  color: var(--dark-gray-70);
+  line-height: 20px;
+  font-weight: var(--font-weight-600);
+  /* line-height: 0; */
+}
+
+.studyGuide__about--title,
+.studyGuide__object--title {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-600);
+  margin-bottom: 6px;
+
+  /* text-align: center; */
+}
