@@ -3,15 +3,18 @@
   justify-content: center;
   align-items: center;
 
-  height: 100%;
+  height: 100vh;
   padding: 32px 20px 60px 20px;
 }
 
 /* Assuming you have a CSS file or a style block */
 .course-page__content {
-  overflow: hidden; /* Add scrollbars if content overflows */
+  flex-grow: 1;
+  overflow: auto; /* Add scrollbars if content overflows */
+  min-height: 0;
   margin-left: 20px;
-  width: calc(100% * 960 / 640);
+  /* width: calc(100% * 960 / 640); */
+  max-width: 795px;
   height: 100%;
   border: 1px solid var(--dark-gray-20);
 }

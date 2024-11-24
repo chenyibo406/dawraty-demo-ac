@@ -1,11 +1,12 @@
 .sidebar {
-  /* width: 100%; */
-  width: calc(100% * 640 / 960);
+  /* width: calc(100% * 640 / 960); */
+  /* width: 354px; */
+  width: 354px;
   height: 100%;
-  /* border: 1px solid #d1d7dc; */
   border: 1px solid var(--dark-gray-20);
-
   box-sizing: border-box; /* Include border in the element's total width and height */
+  max-height: 505px;
+  overflow-y: auto;
 }
 
 .sidebar__icon {
