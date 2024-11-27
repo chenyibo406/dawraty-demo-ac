@@ -17,4 +17,49 @@
   max-width: 795px;
   height: 100%;
   border: 1px solid var(--dark-gray-20);
+  /* padding: 20px; */
+}
+
+.video-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.player-controls {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+}
+
+.controls-menu {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+}
+
+.controls-menu-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.video-container:hover .player-controls {
+  opacity: 1; /* Show controls on hover */
+}
+
+.player-controls button {
+  color: white; /* Icon color */
+}
+
+.player-controls span {
+  color: white; /* Time text color */
+  font-size: 1.2rem;
+  /* padding-top: 1px; */
 }

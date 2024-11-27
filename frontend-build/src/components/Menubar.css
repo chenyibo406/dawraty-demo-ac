@@ -1,0 +1,44 @@
+.menubar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 100; /* Ensure it appears above other elements */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menubar__header {
+  display: flex;
+  justify-content: flex-end; /* Align close icon to the right */
+}
+
+.menubar__content {
+  margin-top: 12px; /* Space between header and content */
+}
+
+.menubar__item {
+  /* margin: 10px 0; */
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  background: #f0f0f0; /* Background for buttons */
+  cursor: pointer;
+  text-align: center; /* Center text */
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4px;
+}
