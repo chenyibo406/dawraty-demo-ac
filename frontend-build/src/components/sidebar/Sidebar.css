@@ -7,6 +7,7 @@
   box-sizing: border-box; /* Include border in the element's total width and height */
   max-height: 505px;
   overflow-y: auto;
+  background: #fff;
 }
 
 .sidebar__icon {
@@ -66,10 +67,6 @@
   transition: opacity 0.3s;
 }
 
-.sidebar__item.selected .sidebar__icon {
-  /* width: 100%; */
-}
-
 .sidebar__item.selected .sidebar__text {
   display: flex;
   opacity: 1;
@@ -77,4 +74,11 @@
 
 .sidebar__item:hover {
   background-color: #f0f0f0;
+}
+
+@media (max-width: 833px) {
+  .sidebar {
+    /* width: 80%; */
+    height: 60vh;
+  }
 }

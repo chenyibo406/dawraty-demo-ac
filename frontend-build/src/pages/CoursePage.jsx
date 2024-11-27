@@ -13,6 +13,7 @@ import PauseIcon from "@mui/icons-material/Pause";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import VolumeDown from "@mui/icons-material/VolumeDown";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 
 import "./CoursePage.css";
 
@@ -23,6 +24,10 @@ function CoursePage() {
   const [volume, setVolume] = useState(0.5);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [activeSidebar, setActiveSidebar] = useState(false);
+  // const [isHoveringFlashcard, setIsHoveringFlashcard] = useState(false);
+  const [sidebarTop, setSidebarTop] = useState("10px");
+
   const playerRef = useRef(null); // Reference to the ReactPlayer
 
   const handlePlayPause = () => {
@@ -53,6 +58,11 @@ function CoursePage() {
     }
   };
 
+  const handleActiveSidebar = () => {
+    setActiveSidebar(!activeSidebar);
+    console.log(activeSidebar);
+  };
+
   const formatTime = (seconds) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
@@ -78,10 +88,18 @@ function CoursePage() {
       case "quiz":
         return <Quiz />;
       case "flashcard":
-        return <Flashcard />;
+        return (
+          <Flashcard
+            handleActiveSidebar={handleActiveSidebar} // Pass the function
+            activeSidebar={activeSidebar} // Pass the state
+            // setActiveComponent={setActiveComponent}
+            // onMouseEnter={() => setIsHoveringFlashcard(true)}
+            // onMouseLeave={() => setIsHoveringFlashcard(false)}
+          />
+        );
       case "reactPlayer":
         return (
-          <div className="video-container">
+          <div className="video__container">
             <ReactPlayer
               ref={playerRef}
               url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
@@ -94,8 +112,8 @@ function CoursePage() {
               onPlay={() => setPlaying(true)}
               onPause={() => setPlaying(false)}
             />
-            <div className="player-controls">
-              <div className="controls-menu">
+            <div className="video__container-menu">
+              <div className="video__container-menu-bottom">
                 <Slider
                   value={currentTime}
                   size="small"
@@ -111,9 +129,10 @@ function CoursePage() {
                     borderRadius: "0",
                     padding: "0",
                     height: 4,
+                    color: "white",
                   }}
                 />
-                <div className="controls-menu-left">
+                <div className="video__container-menu-bottom-left">
                   <IconButton onClick={handlePlayPause}>
                     {playing ? (
                       <PauseIcon
@@ -150,6 +169,7 @@ function CoursePage() {
                       width: 100,
                       borderRadius: 0,
                       height: 4,
+                      color: "white",
                     }}
                   />
                   <span>
@@ -157,9 +177,20 @@ function CoursePage() {
                   </span>
                 </div>
 
-                <IconButton onClick={handleFullscreen}>
-                  <FullscreenIcon style={{ fontSize: "32px" }} />
-                </IconButton>
+                <div className="video__container-menu-bottom-right">
+                  <IconButton onClick={handleFullscreen}>
+                    <FullscreenIcon
+                      style={{ fontSize: "32px", color: "white" }}
+                    />
+                  </IconButton>
+                  <span className="menu-open-icon">
+                    <IconButton onClick={handleActiveSidebar}>
+                      <MenuOpenIcon
+                        style={{ fontSize: "32px", color: "white" }}
+                      />
+                    </IconButton>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -171,7 +202,26 @@ function CoursePage() {
 
   return (
     <div className="course-page">
-      <Sidebar setActiveComponent={setActiveComponent} />
+      <div
+        className="sidebar-menu-container"
+        // style={{ top: isHoveringFlashcard ? "48px" : "10px" }}
+        style={{ top: sidebarTop }}
+      >
+        {activeSidebar && (
+          <Sidebar
+            setActiveComponent={setActiveComponent}
+            setSidebarTop={setSidebarTop}
+          />
+        )}
+      </div>
+
+      <div className="sidebar-default-container">
+        <Sidebar
+          setActiveComponent={setActiveComponent}
+          setSidebarTop={setSidebarTop}
+        />
+      </div>
+
       <div className="course-page__content">{renderActiveComponent()}</div>
     </div>
   );

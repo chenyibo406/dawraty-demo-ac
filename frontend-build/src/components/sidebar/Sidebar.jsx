@@ -12,18 +12,29 @@ import AssistantOutlinedIcon from "@mui/icons-material/AssistantOutlined";
 import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
 import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
 
-function Sidebar({ setActiveComponent }) {
+function Sidebar({ setActiveComponent, setSidebarTop }) {
   const [selectedItem, setSelectedItem] = useState("studyGuide");
   // const [activeComponent, setActiveComponent] = useState("studyGuide");
+  // const [sidebarTop, setSidebarTop] = useState("10px");
 
   const renderActiveComponent = () => {
     switch (selectedItem) {
       case "studyGuide":
         return <StudyGuide setActiveComponent={setActiveComponent} />;
       case "courseContent":
-        return <CourseContent setActiveComponent={setActiveComponent} />;
+        return (
+          <CourseContent
+            setActiveComponent={setActiveComponent}
+            setSidebarTop={setSidebarTop}
+          />
+        );
       case "act":
-        return <Ace setActiveComponent={setActiveComponent} />;
+        return (
+          <Ace
+            setActiveComponent={setActiveComponent}
+            setSidebarTop={setSidebarTop}
+          />
+        );
       case "connect":
         return <Connect setActiveComponent={setActiveComponent} />;
       default:
@@ -32,9 +43,17 @@ function Sidebar({ setActiveComponent }) {
   };
 
   const handleItemClick = (componentName) => {
-    // setActiveComponent(componentName);
     setSelectedItem(componentName);
+    // if (componentName === "act") {
+    //   setSidebarTop("48px");
+    // } else {
+    //   setSidebarTop("10px");
+    // }
   };
+
+  // const handleItemClick = (componentName) => {
+  //   setSelectedItem(componentName);
+  // };
 
   return (
     <div className="sidebar">

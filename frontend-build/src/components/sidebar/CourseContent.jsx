@@ -7,12 +7,13 @@ import {
 import "./CourseContent.css";
 import React, { useState } from "react";
 
-function CourseContent({ setActiveComponent }) {
+function CourseContent({ setActiveComponent, setSidebarTop }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isArrowDown, setIsArrowDown] = useState(false);
 
   const handleTaskClick = () => {
     setActiveComponent("reactPlayer");
+    setSidebarTop("10px");
   };
 
   const topics = [

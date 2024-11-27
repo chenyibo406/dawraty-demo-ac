@@ -6,15 +6,35 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
 import GppMaybeOutlinedIcon from "@mui/icons-material/GppMaybeOutlined";
-
+import { IconButton } from "@mui/material";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import "./Flashcard.css";
+import { useState } from "react";
 
-function Flashcard() {
+function Flashcard({ handleActiveSidebar }) {
+  // const [activeSidebar, setActiveSidebar] = useState(false);
+  // const handleActiveSidebar = () => {
+  //   setActiveSidebar(!activeSidebar);
+  //   console.log(activeSidebar);
+  // };
+
   return (
-    <div className="flashcard">
+    <div
+      className="flashcard"
+      // onMouseEnter={onMouseEnter}
+      // onMouseLeave={onMouseLeave}
+    >
       <div className="flashcard__header">
         <h1>Dawraty</h1>
-        <MenuOpenOutlinedIcon style={{ fontSize: "24px", color: "0b4374s" }} />
+        <MenuOpenOutlinedIcon
+          onClick={handleActiveSidebar}
+          style={{ fontSize: "24px", color: "0b4374s", cursor: "pointer" }}
+        />
+        {/* <span className="menu-open-icon">
+          <IconButton onClick={handleActiveSidebar}>
+            <MenuOpenIcon style={{ fontSize: "32px", color: "white" }} />
+          </IconButton>
+        </span> */}
       </div>
       <div className="flashcard__content">
         <div className="flashcard__content-menu">

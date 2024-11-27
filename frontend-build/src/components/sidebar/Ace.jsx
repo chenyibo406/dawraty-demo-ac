@@ -6,7 +6,7 @@ import ViewStreamOutlinedIcon from "@mui/icons-material/ViewStreamOutlined";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 
-function ace({ setActiveComponent }) {
+function ace({ setActiveComponent, setSidebarTop }) {
   const [selectedChapter, setSelectedChapter] = useState("Select a chapter");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Flashcard");
@@ -37,6 +37,7 @@ function ace({ setActiveComponent }) {
   };
 
   const handleTaskClick = () => {
+    setSidebarTop("56px");
     if (selectedOption === "Flashcard") {
       setActiveComponent("flashcard");
     } else if (selectedOption === "Quiz") {
