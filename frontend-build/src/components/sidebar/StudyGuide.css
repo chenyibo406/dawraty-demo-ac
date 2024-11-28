@@ -28,7 +28,7 @@ ul {
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   text-align: center;
 }
 
@@ -43,9 +43,9 @@ ul {
 
 .studyGuide__about--title,
 .studyGuide__object--title {
-  font-size: var(--font-size-14);
+  font-size: var(--font-size-16);
   font-weight: var(--font-weight-600);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 
   /* text-align: center; */
 }

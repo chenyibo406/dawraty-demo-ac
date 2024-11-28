@@ -18,6 +18,11 @@
   justify-content: flex-end; /* Align close icon to the right */
 }
 
+.menubar__header button {
+  border: none;
+  background-color: transparent;
+}
+
 .menubar__content {
   margin-top: 12px; /* Space between header and content */
 }
@@ -41,4 +46,10 @@
   justify-content: center;
   width: 100%;
   padding: 4px;
+}
+
+@media (min-width: 926px) {
+  .menubar {
+    display: none;
+  }
 }

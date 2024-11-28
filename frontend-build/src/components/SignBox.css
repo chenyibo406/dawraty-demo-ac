@@ -1,0 +1,169 @@
+.signbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.signbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 24px;
+  width: auto;
+  z-index: 1001;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signbox__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.signbox__header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--dark-gray);
+  font-weight: 700;
+}
+
+.signbox__close {
+  cursor: pointer;
+  color: var(--dark-gray);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.signbox__info {
+  font-size: 1.4rem;
+  margin-top: 4px;
+  font-weight: 500;
+  color: var(--dark-gray-60);
+}
+
+.signbox__message-link {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: var(--green);
+}
+
+.signbox__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signbox__form p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.signbox__form input {
+  padding: 12px;
+  border: none;
+
+  font-size: var(--font-size-12);
+  background-color: #e8f0fe;
+  width: 352px;
+  /* max-width: 352px; */
+  /* width: 100%; */
+}
+
+.signbox__form button {
+  padding: 12px;
+  /* background: var(--primary);
+  color: white; */
+  border: none;
+  font-size: var(--font-size-14);
+  font-weight: 500;
+  cursor: pointer;
+  /* transition: background 0.3s; */
+}
+
+/* .signbox__form button:hover {
+  background: var(--primary-dark);
+} */
+
+.signbox__form-reset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.signbox__form-reset-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.signbox__form-reset-left p {
+  margin-bottom: 0;
+}
+
+.signbox__form-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.signbox__form-main-left,
+.signbox__form-main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signbox__form-main-bottom {
+  width: 100%;
+  text-align: center;
+}
+
+.signbox__form-main-bottom button {
+  width: 100%;
+}
+
+.signbox__form-main-bottom-apply {
+  margin-top: 8px;
+}
+
+.signbox__form-main-bottom .upload-cv-btn {
+  text-transform: capitalize;
+  /* background-color: var(--light-blue); */
+}
+
+.term-privacy {
+  margin: 0 4px;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+@media (max-width: 926px) {
+  .signbox__form-main {
+    /* flex-direction: column; */
+    gap: 12px;
+  }
+  .signbox__form-main-left,
+  .signbox__form-main-right {
+    gap: 12px;
+    width: 100%;
+  }
+  .signbox__form input {
+    width: 100%;
+  }
+}

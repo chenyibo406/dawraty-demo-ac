@@ -26,10 +26,15 @@ function Flashcard({ handleActiveSidebar }) {
     >
       <div className="flashcard__header">
         <h1>Dawraty</h1>
-        <MenuOpenOutlinedIcon
+        {/* <MenuOpenOutlinedIcon
           onClick={handleActiveSidebar}
           style={{ fontSize: "24px", color: "0b4374s", cursor: "pointer" }}
-        />
+        /> */}
+        <span className="icon-wrapper" onClick={handleActiveSidebar}>
+          <MenuOpenOutlinedIcon
+            style={{ fontSize: "24px", color: "0b4374s", cursor: "pointer" }}
+          />
+        </span>
         {/* <span className="menu-open-icon">
           <IconButton onClick={handleActiveSidebar}>
             <MenuOpenIcon style={{ fontSize: "32px", color: "white" }} />
@@ -38,11 +43,11 @@ function Flashcard({ handleActiveSidebar }) {
       </div>
       <div className="flashcard__content">
         <div className="flashcard__content-menu">
-          <div className="flashcard__content-menu-icon">
+          {/* <div className="flashcard__content-menu-icon">
             <RemoveRedEyeOutlinedIcon
               style={{ fontSize: "24px", color: "ffffff" }}
             />
-          </div>
+          </div> */}
           <div className="flashcard__content-menu-icon">
             <FavoriteBorderOutlinedIcon
               style={{ fontSize: "24px", color: "ffffff" }}

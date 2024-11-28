@@ -161,3 +161,7 @@
   bottom: 2px;
   right: 10px;
 }
+
+.icon-wrapper {
+  z-index: 1;
+}

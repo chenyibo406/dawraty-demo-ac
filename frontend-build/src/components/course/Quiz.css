@@ -5,11 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .quiz__content {
   border: 1px solid var(--primary-60);
-  width: 644px;
+  max-width: 644px;
   padding: 14px 12px;
   display: flex;
   flex-direction: column;
@@ -36,4 +37,20 @@
   font-size: var(--font-size-14);
   color: var(--secondary);
   font-weight: 500;
+}
+
+.quiz__menu-icon {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.quiz__check-button {
+  border-radius: 40px;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.4rem;
+  margin-top: 12px;
+  max-width: 644px;
 }

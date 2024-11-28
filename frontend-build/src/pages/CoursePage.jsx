@@ -86,7 +86,12 @@ function CoursePage() {
       case "performance":
         return <Performance />;
       case "quiz":
-        return <Quiz />;
+        return (
+          <Quiz
+            activeSidebar={activeSidebar}
+            handleActiveSidebar={handleActiveSidebar}
+          />
+        );
       case "flashcard":
         return (
           <Flashcard

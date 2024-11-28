@@ -20,7 +20,7 @@
 .lock__start-content p {
   font-size: var(--font-size-16);
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 600;
 }
 
@@ -35,4 +35,10 @@
   line-height: 16px;
   font-size: var(--font-size-16);
   /* width: auto; */
+}
+
+.lock__start-content-button:hover {
+  /* color: #fff; */
+  background-color: var(--accent);
+  transition: all 0.2 ease-in-out;
 }

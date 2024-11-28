@@ -1,5 +1,7 @@
 import "./StudyGuide.css";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+import DoneAllIcon from "@mui/icons-material/DoneAll";
+import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 
 function StudyGuide() {
   return (
@@ -18,15 +20,36 @@ function StudyGuide() {
         <h1 className="studyGuide__object--title">Course learning objects</h1>
         <ul className="studyGuide__object--list">
           <li className="studyGuide__object--item">
-            <CheckOutlinedIcon />
+            {/* <CheckOutlinedIcon /> */}
+            {/* <DoneAllIcon /> */}
+            <AssignmentTurnedInIcon
+              style={{
+                fontSize: "20px",
+                color: "green",
+              }}
+            />
             <p>Learning Object 1</p>
           </li>
           <li className="studyGuide__object--item">
-            <CheckOutlinedIcon />
+            {/* <CheckOutlinedIcon /> */}
+            {/* <DoneAllIcon /> */}
+            <AssignmentTurnedInIcon
+              style={{
+                fontSize: "20px",
+                color: "green",
+              }}
+            />
             <p>Learning Object 2</p>
           </li>
           <li className="studyGuide__object--item">
-            <CheckOutlinedIcon />
+            {/* <CheckOutlinedIcon /> */}
+            {/* <DoneAllIcon /> */}
+            <AssignmentTurnedInIcon
+              style={{
+                fontSize: "20px",
+                color: "green",
+              }}
+            />
             <p>Learning Object 3</p>
           </li>
           {/* Add more learning objects as needed */}

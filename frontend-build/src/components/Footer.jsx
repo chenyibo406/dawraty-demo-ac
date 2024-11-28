@@ -5,6 +5,9 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import instagram from "../assets/images/instagram.svg";
 import twitter from "../assets/images/prime_twitter.svg";
+import HeadphonesIcon from "@mui/icons-material/Headphones";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Footer() {
   return (
@@ -31,15 +34,24 @@ function Footer() {
           <h1 className="footer__top-contact-title">Contact us</h1>
           <div className="footer__top-contact-content">
             <p>
-              <EmailOutlinedIcon />
+              <EmailOutlinedIcon
+                className="icon-no-effect"
+                style={{ fontSize: "18px" }}
+              />
               info@joindawraty.com
             </p>
             <p>
-              <LocalPhoneOutlinedIcon />
+              <HeadphonesIcon
+                className="icon-no-effect"
+                style={{ fontSize: "18px" }}
+              />
               +965 6901 0025
             </p>
             <p>
-              <LocalPhoneOutlinedIcon />
+              <HeadphonesIcon
+                className="icon-no-effect"
+                style={{ fontSize: "18px" }}
+              />
               +973 3376 9925
             </p>
           </div>
@@ -55,8 +67,10 @@ function Footer() {
           <p>FAQ</p>
         </div>
         <div className="footer__bottom-socialMedia">
-          <img src={instagram} alt="ins" />
-          <img src={twitter} alt="twitter" />
+          {/* <img src={instagram} alt="ins" /> */}
+          {/* <img src={twitter} alt="twitter" /> */}
+          <InstagramIcon style={{ fontSize: "24px" }} />
+          <XIcon style={{ fontSize: "20px" }} />
         </div>
       </div>
     </div>

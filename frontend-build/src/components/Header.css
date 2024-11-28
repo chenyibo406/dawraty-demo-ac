@@ -10,6 +10,11 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  position: relative;
+}
+
+.header__left img {
+  max-width: none;
 }
 
 .header__burger-icon {
@@ -20,19 +25,23 @@
   font-size: var(--font-size-14);
   font-weight: 500;
   color: var(--dark-gray);
+  margin: 0;
+  padding: 0;
 }
+
 .header__searchbox {
   display: flex;
   align-items: center; /* Center the icon and input vertically */
   position: relative;
   width: 100%;
-  margin-left: 60px;
+  /* margin-left: 60px; */
 }
 
 .header__searchbox-full {
+  flex: 1;
   display: none;
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   background: white; /* Background color for the search area */
   z-index: 10; /* Ensure it appears above other elements */
 }
@@ -67,8 +76,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 8px;
   width: 100%;
+  /* margin-left: 0; */
+  /* flex-grow: 1; */
+  /* min-width: 0; */
 }
 
 .header__right-login,
@@ -79,28 +91,43 @@
   padding: 10px 16px;
   height: 100%;
   border-radius: 40px;
+  flex-grow: 1;
+  /* width: 100%; */
+  /* white-space: normal; */
 }
-.header__right-login {
+/* .header__right-login {
   color: var(--primary);
   background-color: #fff;
-}
+} */
 
-.header__right-signup {
+/* .header__right-signup {
   color: #fff;
   background-color: var(--primary);
+} */
+
+.header__right-cartIcon {
+  /* flex-grow: 1; */
+  margin: 0 8px;
+}
+
+.header__right-instructor {
+  /* flex-grow: 1; */
+  margin: 0 4px;
+  cursor: pointer;
 }
 
 .header__right-instructor h1 {
   font-size: var(--font-size-14);
   font-weight: 600;
-  color: var(--dark-gray);
-  text-decoration: underline;
+  /* color: var(--dark-gray); */
+  /* text-decoration: underline; */
   text-transform: capitalize;
 }
 
 .header__right-lan {
   display: flex;
   align-items: center; /* Center items vertically */
+  flex-grow: 1;
 }
 
 .language-switch {
@@ -108,7 +135,6 @@
   cursor: pointer;
   border-radius: 20px;
   background-color: white;
-
   width: 100px;
   justify-content: space-between;
   border: 1px solid var(--primary);
@@ -152,6 +178,7 @@
   .header {
     position: relative;
     justify-content: space-between;
+    gap: 0;
   }
 
   .header__left {
@@ -192,11 +219,18 @@
   .header__right-searchIcon {
     display: flex;
     cursor: pointer;
+    margin-left: 6px;
   }
   .header__searchbox-full {
     display: flex;
     align-items: center;
     width: 100%;
     margin: 0;
+  }
+}
+
+@media (min-width: 926px) {
+  .overlay {
+    background-color: transparent;
   }
 }
