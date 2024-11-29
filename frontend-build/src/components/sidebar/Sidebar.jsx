@@ -14,8 +14,6 @@ import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
 
 function Sidebar({ setActiveComponent, setSidebarTop }) {
   const [selectedItem, setSelectedItem] = useState("studyGuide");
-  // const [activeComponent, setActiveComponent] = useState("studyGuide");
-  // const [sidebarTop, setSidebarTop] = useState("10px");
 
   const renderActiveComponent = () => {
     switch (selectedItem) {
@@ -44,16 +42,7 @@ function Sidebar({ setActiveComponent, setSidebarTop }) {
 
   const handleItemClick = (componentName) => {
     setSelectedItem(componentName);
-    // if (componentName === "act") {
-    //   setSidebarTop("48px");
-    // } else {
-    //   setSidebarTop("10px");
-    // }
   };
-
-  // const handleItemClick = (componentName) => {
-  //   setSelectedItem(componentName);
-  // };
 
   return (
     <div className="sidebar">
@@ -61,7 +50,7 @@ function Sidebar({ setActiveComponent, setSidebarTop }) {
         <ul>
           <li
             className={`sidebar__item ${
-              selectedItem === "studyGuide" ? "selected" : ""
+              selectedItem === "studyGuide" ? "selected" : "inactive"
             }`}
             onClick={() => handleItemClick("studyGuide")}
           >
@@ -71,16 +60,19 @@ function Sidebar({ setActiveComponent, setSidebarTop }) {
                 style={{
                   fontSize: "24px",
                   color: "0e0e0e", // Color for outlined icon
+                  opacity: selectedItem === "studyGuide" ? 1 : 0.8,
                 }}
               />
-              <span className="sidebar__text">Study Guide</span>
+              <span className={selectedItem === "studyGuide" ? "" : "inactive"}>
+                Study Guide
+              </span>
             </div>
             <img src={aiTag} className="sidebar__icon--aiTag" />
           </li>
 
           <li
             className={`sidebar__item ${
-              selectedItem === "courseContent" ? "selected" : ""
+              selectedItem === "courseContent" ? "selected" : "inactive"
             }`}
             onClick={() => handleItemClick("courseContent")}
           >
@@ -89,14 +81,19 @@ function Sidebar({ setActiveComponent, setSidebarTop }) {
               style={{
                 fontSize: "28px",
                 color: "0e0e0e", // Color for outlined icon
+                opacity: selectedItem === "courseContent" ? 1 : 0.8,
               }}
             />
-            <span className="sidebar__text">Course Content</span>
+            <span
+              className={selectedItem === "courseContent" ? "" : "inactive"}
+            >
+              Course Content
+            </span>
           </li>
 
           <li
             className={`sidebar__item ${
-              selectedItem === "act" ? "selected" : ""
+              selectedItem === "act" ? "selected" : "inactive"
             }`}
             onClick={() => handleItemClick("act")}
           >
@@ -105,26 +102,32 @@ function Sidebar({ setActiveComponent, setSidebarTop }) {
                 style={{
                   fontSize: "28px",
                   color: "0e0e0e", // Color for outlined icon
+                  opacity: selectedItem === "act" ? 1 : 0.8,
                 }}
               />
-              <span className="sidebar__text">ACE</span>
+              <span className={selectedItem === "act" ? "" : "inactive"}>
+                ACE
+              </span>
             </div>
             <img src={aiTag} className="sidebar__icon--aiTag" />
           </li>
 
           <li
             className={`sidebar__item ${
-              selectedItem === "connect" ? "selected" : ""
+              selectedItem === "connect" ? "selected" : "inactive"
             }`}
             onClick={() => handleItemClick("connect")}
           >
             <PersonAddAltOutlinedIcon
               style={{
                 fontSize: "24px",
-                color: "0e0e0e", // Color for outlined icon
+                color: "0e0e0e",
+                opacity: selectedItem === "connect" ? 1 : 0.8,
               }}
             />
-            <span className="sidebar__text">Connects</span>
+            <span className={selectedItem === "connect" ? "" : "inactive"}>
+              Connects
+            </span>
           </li>
         </ul>
       </div>

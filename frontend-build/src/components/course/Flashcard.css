@@ -63,6 +63,19 @@
   align-items: center;
 }
 
+.flashcard__content-menu-icon.active {
+  background-color: white;
+}
+
+/* Optional: Add hover effect */
+.flashcard__content-menu-icon:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.flashcard__content-menu-icon.active:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 .flashcard__content-info {
   display: flex;
   align-items: center;
@@ -85,13 +98,15 @@
 .flashcard__content-info-icon {
   width: 48px;
   height: 48px;
-  /* color: #fff; */
   border: 2px solid #fff;
-
   border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flashcard__content-info-icon:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .flashcard__content-rates {
@@ -113,6 +128,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 40px;
+}
+
+.flashcard__content-rates-icon:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.flashcard__content-rates-icon.active {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .flashcard__counter {
@@ -164,4 +187,70 @@
 
 .icon-wrapper {
   z-index: 1;
+}
+
+.report-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.report-modal {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.report-modal__header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.report-modal__description {
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.report-modal__textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.report-modal__submit {
+  background-color: #0b4374;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.report-modal__submit:hover {
+  background-color: #083058;
 }

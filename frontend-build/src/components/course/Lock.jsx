@@ -17,6 +17,7 @@ function Lock() {
           borderRadius: "40px",
           border: "1px solid white",
         }}
+        className="icon-no-effect"
       />
       <div className="lock__start-content">
         <p> setup the Ai Study Guide</p>

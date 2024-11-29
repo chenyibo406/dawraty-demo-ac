@@ -6,6 +6,14 @@ import SignBox from "./SignBox";
 const Menubar = ({ onClose }) => {
   const [activeLanguage, setActiveLanguage] = useState("EN");
   const [signBoxType, setSignBoxType] = useState(null);
+  const categories = [
+    "All Courses",
+    "Pathology",
+    "Bio Chemistry",
+    "Allied Health",
+    "Medicine",
+    "Mathematics",
+  ];
 
   const handleLanguageChange = (lang) => {
     setActiveLanguage(lang); // Update active language
@@ -69,6 +77,14 @@ const Menubar = ({ onClose }) => {
               AR
             </span>
           </div>
+        </div>
+        <div className="menubar__category">
+          <h1 className="menubar__category-title">Category</h1>
+          {categories.map((category, index) => (
+            <div key={index} className="category-item">
+              {category}
+            </div>
+          ))}
         </div>
       </div>
       {signBoxType && (

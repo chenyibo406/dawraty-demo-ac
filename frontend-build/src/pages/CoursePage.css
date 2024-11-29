@@ -42,7 +42,7 @@
   justify-content: space-between;
   position: relative;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
 }
 
 .video__container-menu-bottom-left {

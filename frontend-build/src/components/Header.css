@@ -1,9 +1,10 @@
 .header {
-  padding: 10px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
   gap: 20px;
+  height: 72px;
 }
 
 .header__left {
@@ -11,6 +12,9 @@
   align-items: center;
   gap: 12px;
   position: relative;
+  /* border: 1px solid green; */
+  height: 100%;
+  cursor: pointer;
 }
 
 .header__left img {
@@ -21,12 +25,27 @@
   display: none; /* Hide by default */
 }
 
-.header__left-category {
+.header__left-category-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header__left-category-container-topic {
   font-size: var(--font-size-14);
   font-weight: 500;
   color: var(--dark-gray);
   margin: 0;
   padding: 0;
+  cursor: pointer;
+  transition: all 0.2 ease-in-out;
+  width: 100%;
+}
+
+.header__left-category-container-topic:hover {
+  color: var(--light-blue);
 }
 
 .header__searchbox {
@@ -67,6 +86,11 @@
   background: #eeeeee;
 }
 
+.header__searchbox-input:focus {
+  outline: 2px solid #0b4374; /* Change the color and thickness as needed */
+  border-color: #0b4374; /* Optional: change border color on focus */
+}
+
 .header__searchbox-icon {
   position: absolute;
   left: 12px;
@@ -78,9 +102,6 @@
   justify-content: flex-end;
   gap: 8px;
   width: 100%;
-  /* margin-left: 0; */
-  /* flex-grow: 1; */
-  /* min-width: 0; */
 }
 
 .header__right-login,
@@ -92,26 +113,13 @@
   height: 100%;
   border-radius: 40px;
   flex-grow: 1;
-  /* width: 100%; */
-  /* white-space: normal; */
 }
-/* .header__right-login {
-  color: var(--primary);
-  background-color: #fff;
-} */
-
-/* .header__right-signup {
-  color: #fff;
-  background-color: var(--primary);
-} */
 
 .header__right-cartIcon {
-  /* flex-grow: 1; */
   margin: 0 8px;
 }
 
 .header__right-instructor {
-  /* flex-grow: 1; */
   margin: 0 4px;
   cursor: pointer;
 }
@@ -119,8 +127,6 @@
 .header__right-instructor h1 {
   font-size: var(--font-size-14);
   font-weight: 600;
-  /* color: var(--dark-gray); */
-  /* text-decoration: underline; */
   text-transform: capitalize;
 }
 
@@ -201,7 +207,7 @@
     display: block; /* Show burger icon on smaller screens */
   }
 
-  .header__left-category {
+  .header__left-category-container-topic {
     display: none;
   }
 

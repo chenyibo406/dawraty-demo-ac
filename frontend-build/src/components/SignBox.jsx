@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignBox.css";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 function SignBox({ type, onClose, onTypeChange }) {
+  const [isRememberMe, setIsRememberMe] = useState(false);
+
   const getTitle = () => {
     switch (type) {
       case "login":
@@ -73,8 +76,15 @@ function SignBox({ type, onClose, onTypeChange }) {
                 <p>password</p>
                 <input type="password" placeholder="Password" />
                 <div className="signbox__form-reset">
-                  <div className="signbox__form-reset-left">
-                    <CheckBoxOutlineBlankIcon />
+                  <div
+                    className="signbox__form-reset-left"
+                    onClick={() => setIsRememberMe(!isRememberMe)}
+                  >
+                    {isRememberMe ? (
+                      <CheckBoxIcon style={{ color: "#4CAF50" }} />
+                    ) : (
+                      <CheckBoxOutlineBlankIcon />
+                    )}
                     <p>remember me</p>
                   </div>
                   <div className="signbox__form-reset-right">

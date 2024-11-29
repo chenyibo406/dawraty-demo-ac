@@ -59,7 +59,7 @@ function Footer() {
       </div>
       <div className="footer__bottom">
         <div className="footer__bottom-right">
-          <p>2024 Dawraty. All Rights Reserved</p>
+          <p>2024 Dawraty. &nbsp; All Rights Reserved</p>
         </div>
         <div className="footer__bottom-regulation">
           <p>Privacy Policy</p>

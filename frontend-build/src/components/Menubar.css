@@ -48,6 +48,22 @@
   padding: 4px;
 }
 
+.menubar__category {
+  /* border: 1px solid red; */
+  border-top: 1px solid var(--primary-20);
+  /* padding: 16px 0 18px; */
+  margin-top: 12px;
+}
+
+.menubar__category-title {
+  padding: 16px 0 12px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
 @media (min-width: 926px) {
   .menubar {
     display: none;

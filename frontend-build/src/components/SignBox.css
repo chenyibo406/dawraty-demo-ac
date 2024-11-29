@@ -82,6 +82,11 @@
   /* width: 100%; */
 }
 
+.signbox__form input:focus {
+  outline: 2px solid #0b4374;
+  border-color: #0b4374;
+}
+
 .signbox__form button {
   padding: 12px;
   /* background: var(--primary);
@@ -147,10 +152,28 @@
   /* background-color: var(--light-blue); */
 }
 
+.signbox__message-link {
+  cursor: pointer;
+}
+
 .term-privacy {
   margin: 0 4px;
   text-transform: capitalize;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.signbox__form-reset-left {
+  cursor: pointer;
+}
+
+.signbox__form-reset-right {
+  cursor: pointer;
+  transition: all 0.2 ease-in-out;
+}
+
+.signbox__form-reset-right:hover {
+  color: var(--green);
 }
 
 @media (max-width: 926px) {

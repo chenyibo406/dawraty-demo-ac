@@ -40,5 +40,6 @@
 .lock__start-content-button:hover {
   /* color: #fff; */
   background-color: var(--accent);
+  /* border: none; */
   transition: all 0.2 ease-in-out;
 }

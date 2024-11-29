@@ -7,12 +7,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Menubar from "./Menubar";
 import SignBox from "./SignBox";
+import CategoryBox from "./CategoryBox";
 
 function Header() {
   const [language, setLanguage] = useState("EN"); // State to track the selected language
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isIconsVisible, setIsIconsVisible] = useState(true);
   const [isMenubarVisible, setIsMenubarVisible] = useState(false);
+  const [isCategoryVisible, setIsCategoryVisible] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "EN" ? "AR" : "EN")); // Toggle between EN and AR
@@ -49,6 +51,14 @@ function Header() {
     setSignBoxType(newType);
   };
 
+  const handleCategoryMouseEnter = () => {
+    setIsCategoryVisible(true);
+  };
+
+  const handleCategoryMouseLeave = () => {
+    setIsCategoryVisible(false);
+  };
+
   return (
     <>
       <div className="header">
@@ -63,7 +73,14 @@ function Header() {
 
         <div className="header__left">
           {isIconsVisible && <img src={logo} alt="logo" width={"60"} />}
-          <h1 className="header__left-category">Category</h1>
+          <div
+            className="header__left-category-container"
+            onMouseEnter={handleCategoryMouseEnter}
+            onMouseLeave={handleCategoryMouseLeave}
+          >
+            <h1 className="header__left-category-container-topic">Category</h1>
+            {isCategoryVisible && <CategoryBox />}
+          </div>
         </div>
 
         <div className="header__searchbox">

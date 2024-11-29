@@ -27,8 +27,8 @@ function ace({ setActiveComponent, setSidebarTop }) {
     "Chapter 3: Advanced Topics",
     // Add more chapters as needed
   ];
-  const handleChapterSelect = (chapters) => {
-    setSelectedChapter(chapters);
+  const handleChapterSelect = (chapter) => {
+    setSelectedChapter(chapter);
     setIsDropdownOpen(false);
   };
 
@@ -56,7 +56,19 @@ function ace({ setActiveComponent, setSidebarTop }) {
           className="ace__chapter-btn"
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
-          {selectedChapter} <img src={arrowDown} alt="arrow down" />
+          <span
+            className={selectedChapter !== "Select a chapter" ? "selected" : ""}
+          >
+            {selectedChapter}
+          </span>
+          <img
+            src={arrowDown}
+            alt="arrow down"
+            style={{
+              transform: isDropdownOpen ? "rotate(180deg)" : "rotate(0deg)",
+              transition: "transform 0.3s ease",
+            }}
+          />
         </button>
 
         {isDropdownOpen && (
@@ -64,7 +76,9 @@ function ace({ setActiveComponent, setSidebarTop }) {
             {chapters.map((chapter, index) => (
               <div
                 key={index}
-                className="ace__chapter-dropdown-item"
+                className={`ace__chapter-dropdown-item ${
+                  selectedChapter === chapter ? "selected" : ""
+                }`}
                 onClick={() => handleChapterSelect(chapter)}
               >
                 {chapter}

@@ -68,8 +68,6 @@ function CourseContent({ setActiveComponent, setSidebarTop }) {
                   <li key={index} onClick={handleTaskClick}>
                     <div className="courseContent__task--topic">
                       <div className="courseContent__task--check">
-                        {/* <img src={checkIcon} alt="check icon" /> */}
-                        {/* <img src={checkBox} alt="check box" /> */}
                         <CheckBoxOutlineBlankOutlinedIcon
                           style={{ fontSize: "20px" }}
                         />
