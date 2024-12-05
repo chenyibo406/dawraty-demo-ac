@@ -29,13 +29,6 @@ function Flashcard({ handleActiveSidebar }) {
     setIsFavorite(!isFavorite);
   };
 
-  // Add this handler
-  // const handleSubmit = () => {
-  //   console.log(reportText);
-  //   setShowReport(false);
-  //   setReportText("");
-  // };
-
   const handleRating = (type) => {
     if (rating === type) {
       setRating(null); // Unselect if clicking the same button

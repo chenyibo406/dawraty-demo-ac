@@ -90,9 +90,23 @@
   background-color: #f0f0f0;
 }
 
-@media (max-width: 833px) {
+@media (max-width: 926px) {
   .sidebar {
-    /* width: 80%; */
-    height: 60vh;
+    height: 363px;
+    overflow: hidden;
+  }
+
+  .sidebar__content {
+    max-height: 100%; /* Ensure content can take full height */
+    overflow-y: auto; /* Enable scrolling */
+    padding-bottom: 60px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

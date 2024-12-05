@@ -19,6 +19,7 @@ import playXS from './play-sm.svg'
 import studyGuideIcon from "./study-guide.svg"
 import pageView from './page-view.svg'
 import listView from './list-view.svg'
+import quote from './icons_quote.svg'
 
 // Export all icons
 export {
@@ -41,5 +42,6 @@ export {
   playXS,
   studyGuideIcon,
   pageView,
-  listView
+  listView,
+  quote
 };

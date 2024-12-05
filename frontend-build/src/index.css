@@ -143,6 +143,7 @@ blockquote {
     var(--primary)
   );
   --dashboard-lg-bg-lightBlue: linear-gradient(to right, #badfff, #a1e6ff);
+  --home-hero-lg-bg: linear-gradient(to right, #133bb4, #0eb8f4);
 
   --primary-90: rgba(11, 67, 116, 0.9);
   --secondary-90: rgba(19, 139, 180, 0.9);
